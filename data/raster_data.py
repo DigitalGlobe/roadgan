@@ -15,8 +15,8 @@ import json
 tile_engine = TileEngine()
 tile_engine.add_directory("data/tilestacks")
 
-road_engine = OSMRoadEngine(use_overpass=True)
-#road_engine.load_directory("data/cache", verbose=True)
+road_engine = OSMRoadEngine(use_overpass=False)
+road_engine.load_directory("data/cache", verbose=True)
 
 
 def make_transform():

@@ -27,9 +27,9 @@ REDRAW_INTERVAL = max(200//BATCH_SIZE, 1)
 
 dataset = Sampler()
 test_dataset = Sampler(test=True)
-loader = DataLoader(dataset, batch_size=BATCH_SIZE, num_workers=16, shuffle=True)
+loader = DataLoader(dataset, batch_size=BATCH_SIZE, num_workers=2, shuffle=True)
 test_loader = iter(DataLoader(
-    test_dataset, batch_size=BATCH_SIZE, num_workers=8))
+    test_dataset, batch_size=BATCH_SIZE, num_workers=2))
 
 cuda0 = torch.device('cuda:0')
 cuda1 = torch.device('cpu')
